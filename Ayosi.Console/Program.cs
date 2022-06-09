@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ayosi.Console.Demo;
+using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -6,9 +8,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Container container = new Container();
-            container.AddService(typeof(IPersonService));
 
+            var minimalContainer = new MinimalContainer();
+            minimalContainer.Register<ITruck, TruckManagement>();
+            minimalContainer.Register<IDriver, Driver>();
+
+            var truckManagement = (TruckManagement)minimalContainer.Create(typeof(ITruck));
+            truckManagement.WorkDriver();
+            truckManagement.WorkDriver();
+            truckManagement.WorkDriver();
+            truckManagement.GetTotalWorkingHours();
 
         }
     }
