@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp1
+namespace Ayosi.ConsoleDemo.Demo
 {
-    public class TruckManagement : ITruck
+    public class TruckManagement : ITruckManagement
     {
         private readonly IDriver _driver;
 

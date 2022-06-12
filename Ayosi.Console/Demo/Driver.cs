@@ -1,19 +1,19 @@
 ﻿using System;
-
-namespace ConsoleApp1
+namespace Ayosi.ConsoleDemo.Demo
 {
+
     public class Driver : IDriver
     {
         public double TotalWorkingHours { get; set; } = 0;
 
         public void GetHours()
         {
-            Console.WriteLine(this.TotalWorkingHours);
+            Console.WriteLine(TotalWorkingHours);
         }
 
         public void Work()
         {
-            this.TotalWorkingHours += 24;
+            TotalWorkingHours += 24;
         }
     }
 }

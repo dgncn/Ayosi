@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ayosi.Console\Ayosi.Console.csproj" />
+    <ProjectReference Include="..\Ayosi.Console\Ayosi.ConsoleDemo.csproj" />
   </ItemGroup>
 
 </Project>

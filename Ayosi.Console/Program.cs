@@ -1,19 +1,17 @@
-﻿using Ayosi.Console.Demo;
-using System;
-using System.Collections.Generic;
+﻿using Ayosi.ConsoleDemo.Demo;
 
-namespace ConsoleApp1
+namespace Ayosi.ConsoleDemo
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
 
             var minimalContainer = new MinimalContainer();
-            minimalContainer.Register<ITruck, TruckManagement>();
+            minimalContainer.Register<ITruckManagement, TruckManagement>();
             minimalContainer.Register<IDriver, Driver>();
 
-            var truckManagement = (TruckManagement)minimalContainer.Create(typeof(ITruck));
+            var truckManagement = (TruckManagement)minimalContainer.Create(typeof(ITruckManagement));
             truckManagement.WorkDriver();
             truckManagement.WorkDriver();
             truckManagement.WorkDriver();
@@ -21,4 +19,5 @@ namespace ConsoleApp1
 
         }
     }
+
 }

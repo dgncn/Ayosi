@@ -1,6 +1,6 @@
-﻿namespace ConsoleApp1
+﻿namespace Ayosi.ConsoleDemo.Demo
 {
-    public interface ITruck
+    public interface ITruckManagement
     {
         void GetTotalWorkingHours();
         void WorkDriver();

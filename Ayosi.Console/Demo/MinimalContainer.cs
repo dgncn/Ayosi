@@ -1,10 +1,8 @@
-﻿using ConsoleApp1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace Ayosi.Console.Demo
+namespace Ayosi.ConsoleDemo.Demo
 {
     public class MinimalContainer
     {
@@ -33,13 +31,14 @@ namespace Ayosi.Console.Demo
             var parameters = defaultParams.Select(param => Create(param.ParameterType)).ToArray();
 
             return defaultConstructor.Invoke(parameters);
-
-
         }
 
-        //public TInterface Create()
-        //{
-        //    return (TInterface)Create(typeof(TInterface));
-        //}
+        public int ContainerCount
+        {
+            get
+            {
+                return types.Count;
+            }
+        }
     }
 }

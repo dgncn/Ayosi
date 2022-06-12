@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1
+﻿namespace Ayosi.ConsoleDemo.Demo
 {
     public interface IDriver
     {
