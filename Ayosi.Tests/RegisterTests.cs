@@ -11,7 +11,7 @@ namespace Ayosi.Tests
             //Arrange
             MinimalContainer minimalContainer = new MinimalContainer();
 
-            //Action
+            //Act
             minimalContainer.Register<IDriver, Driver>();
             var driver = (Driver)minimalContainer.Create(typeof(IDriver));
             driver.Work();
