@@ -1,3 +1,10 @@
+
 # Ayosi
 
-Ayosi is an experimental inversion of control container library written in c#. 
+Ayosi is a very basic, experimental inversion of control container library written in c#. 
+
+## Plans
+* Lifetime options(Scoped, Singleton, Transient )
+* Fluent Method Chaining like Linq methods etc(.Where(...).ToList()) 
+* Builder Pattern using while creating container
+* Locking and Caching technics at registered services (ConcurrentDictionary using)
