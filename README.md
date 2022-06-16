@@ -8,3 +8,4 @@ Ayosi is a very basic, experimental inversion of control container library writt
 * Fluent Method Chaining like Linq methods etc(.Where(...).ToList()) 
 * Builder Pattern using while creating container
 * Locking and Caching technics at registered services (ConcurrentDictionary using)
+* Benchmarking with other libraries(autofac,castle) 
