@@ -9,7 +9,7 @@ namespace Ayosi.Tests
         public void Container_Count_Should_One_When_Registering_A_Service_To_Container()
         {
             //Arrange
-            MinimalContainer minimalContainer = new MinimalContainer();
+            var minimalContainer = new MinimalContainer();
 
             //Act
             minimalContainer.Register<IDriver, Driver>();
@@ -17,7 +17,24 @@ namespace Ayosi.Tests
             driver.Work();
 
             //Assert
-            Assert.Equal(1, minimalContainer.ContainerCount);
+            Assert.Equal(1, minimalContainer.RegisteredServicesCount);
+        }
+
+        [Fact]
+        public void Check_Singularity_Of_Registered_As_Singleton_Service()
+        {
+            //Arrange
+            var minimalContainer = new MinimalContainer();
+
+            //Act
+            minimalContainer.Register<IDriver, Driver>();
+            
+            //.AsSingleton();
+            var driver = (Driver)minimalContainer.Create(typeof(IDriver));
+            driver.Work();
+
+            //Assert
+            Assert.Equal(1, minimalContainer.RegisteredServicesCount);
         }
 
     }
