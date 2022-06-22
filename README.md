@@ -9,3 +9,5 @@ Ayosi is a very basic, experimental inversion of control container library writt
 * Builder Pattern using while creating container
 * Locking and Caching technics at registered services (ConcurrentDictionary using)
 * Benchmarking with other libraries(autofac,castle) 
+* Adding Build pipeline like travisci
+* Nuget package creating
