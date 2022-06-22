@@ -7,7 +7,7 @@ namespace Ayosi.ConsoleDemo
         static void Main(string[] args)
         {
 
-            AyosiContainer minimalContainer = new MinimalContainer();
+            AyosiContainer minimalContainer = new AyosiContainer();
             minimalContainer.Register<ITruckManagement, TruckManagement>();
             minimalContainer.Register<IDriver, Driver>();
 

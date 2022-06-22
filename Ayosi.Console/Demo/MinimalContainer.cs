@@ -4,8 +4,5 @@ using System.Linq;
 
 namespace Ayosi.ConsoleDemo.Demo
 {
-    public class MinimalContainer : AyosiContainer
-    {
-
-    }
+    
 }
